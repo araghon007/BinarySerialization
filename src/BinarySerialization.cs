@@ -232,7 +232,7 @@ namespace Rigel.Serialization
                 case SerializeTypeEnum.UInt64:
                     return s.ReadUInt64();
                 case SerializeTypeEnum.String:
-                    return s.ReadString(Encoding.ASCII);
+                    return s.ReadString(Encoding.UTF8);
                 default:
                     throw new Exception();
             }
@@ -273,7 +273,7 @@ namespace Rigel.Serialization
                     s.WriteUInt64((UInt64)val);
                     break;
                 case SerializeTypeEnum.String:
-                    s.WriteString((string)val, Encoding.ASCII);
+                    s.WriteString((string)val, Encoding.UTF8);
                     break;
                 default:
                     throw new Exception();
