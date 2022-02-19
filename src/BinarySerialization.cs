@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace Rigel.Serialization
 {
 
-    public static class BinarySeralizer
+    public static class BinarySerializer
     {
         public static byte[] Serialize<T>(T t, bool extraInfo = false)
         {

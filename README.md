@@ -16,7 +16,7 @@ public class SampleData{
 serialize object
 ```c#
 var sample = new SampleData();
-byte[] data = BinarySeralizer.Serialize(sample);
+byte[] data = BinarySerializer.Serialize(sample);
 Console.WriteLine(string.Join(',',data));
 ```
 
@@ -27,7 +27,7 @@ byte array output
 
 Deserialize byte array
 ```c#
-var sampl1 = BinarySeralizer.Deserialize<SampleData>(data);
+var sampl1 = BinarySerializer.Deserialize<SampleData>(data);
 ```
 
 ## Features

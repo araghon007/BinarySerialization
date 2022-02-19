@@ -26,7 +26,7 @@ namespace BinarySerialization
             Console.WriteLine("Json serialize:" + watch.ElapsedTicks + " - " + watch.ElapsedMilliseconds + "ms");
 
             watch.Restart();
-            byte[] data = BinarySeralizer.Serialize(testdata);
+            byte[] data = BinarySerializer.Serialize(testdata);
             watch.Stop();
             Console.WriteLine("Binary serialize:" + watch.ElapsedTicks + " - " + watch.ElapsedMilliseconds + "ms");
 
@@ -37,7 +37,7 @@ namespace BinarySerialization
             Console.WriteLine("Json deseralize:" + watch.ElapsedTicks + " - " + watch.ElapsedMilliseconds + "ms");
 
             watch.Restart();
-            var testdata1 = BinarySeralizer.Deserialize<TestData>(data);
+            var testdata1 = BinarySerializer.Deserialize<TestData>(data);
             watch.Stop();
             Console.WriteLine("Binary deseralize:" + watch.ElapsedTicks + " - " + watch.ElapsedMilliseconds + "ms");
 
